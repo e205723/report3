@@ -36,11 +36,7 @@ public class Enemy {
     public void attack(Hero hero){
         if(!dead){
             int damage = (int)(Math.random() * attack);
-<<<<<<< HEAD
             System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", name, hero.getName(), damage);
-=======
-            System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", name, hero.name, damage);
->>>>>>> e88470f588712a702e42fbfec046239842647f86
             hero.wounded(damage);
         }
     }
@@ -58,20 +54,64 @@ public class Enemy {
         }
     }
 
+    /**
+     * フィールドnameのgetterメソッド。
+     */
     public String getName(){
         return this.name;
     }
 
+    /**
+     * フィールドhitPointのgetterメソッド。
+     */
     public int getHitPoint(){
         return this.hitPoint;
     }
 
+    /**
+     * フィールドattackのgetterメソッド。
+     */
     public int getAttack(){
         return this.attack;
     }
 
+    /**
+     * フィールドdeadのgetterメソッド。
+     */
     public boolean getDead(){
         return this.dead;
+    }
+
+    /**
+     * フィールドnameのsetterメソッド。
+     * @param name フィールドnameに代入する
+     */
+    public void setName(String name){
+        this.name = name;
+    }
+
+    /**
+     * フィールドhitPointのsetterメソッド。
+     * @param hitPoint フィールドhitPointに代入する
+     */
+    public void setHitPoint(int hitPoint){
+        this.hitPoint = hitPoint;
+    }
+
+    /**
+     * フィールドattackのsetterメソッド。
+     * @param attack フィールドattackに代入する
+     */
+    public void setAttack(int attack){
+        this.attack = attack;
+    }
+
+    /**
+     * フィールドdeadのsetterメソッド。
+     * @param dead フィールドdeadに代入する
+     */
+    public void setDead(boolean dead){
+        this.dead = dead;
     }
 
 }
